@@ -42,6 +42,7 @@ parser.add_argument('--keyname', help="name of the SSH key to use")
 parser.add_argument('--nuuid', help="external network UUID")
 parser.add_argument('--iid', help="instance image UUID")
 parser.add_argument('--itype', help="instace type")
+parser.add_argument('--debug', help="do not destroy the stack at the end", action='store_true', default=False)
 args = parser.parse_args()
 
 def stop(msg, error=None):
@@ -166,4 +167,5 @@ for host, ip in ips.items():
 print "Summary:"
 print status
 
-stopstack()
+if not args.debug:
+    stopstack()
