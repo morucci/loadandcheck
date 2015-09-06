@@ -1,5 +1,5 @@
-The purpose of this little script is to start user defined amout
-of VMs on an Openstack cloud and check the SSH availability of the
+The purpose of this little script is to start a defined amount
+of VMs on an OpenStack cloud and check the SSH availability of the
 created VMs.
 
 The main purpose was to test, that regarding the amount of VMs you want to
